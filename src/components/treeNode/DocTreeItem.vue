@@ -122,18 +122,18 @@ const findActiveChild = (children, activeId) => {
     cursor: pointer;
     transition: all 0.2s;
     border-radius: 4px;
-    color: var(--theme-text); /* Default text color */
+    color: #333;
     margin: 2px 0;
 
     &:hover {
-      background-color: var(--theme-hover); /* Hover background */
+      background-color: #e8f2ff;
     }
 
     &.active {
-      background-color: var(--theme-hover); /* Active background */
-      color: var(--el-color-primary); /* Active text color */
+      background-color: #e8f2ff;
+      color: #012fa6;
       font-weight: 600;
-      border-left: 3px solid var(--el-color-primary); /* Active border color */
+      border-left: 3px solid #012fa6;
       padding-left: 5px;
     }
 
@@ -142,9 +142,8 @@ const findActiveChild = (children, activeId) => {
       text-align: center;
       margin-right: 4px;
       user-select: none;
-      color: var(--theme-text-secondary); /* Toggle icon color */
+      color: #012fa6;
       cursor: pointer;
-      transition: color 0.3s;
 
       .toggle-icon {
         font-size: 10px;
@@ -152,7 +151,7 @@ const findActiveChild = (children, activeId) => {
         display: inline-block;
 
         &.expanded {
-          color: var(--el-color-primary); /* Expanded icon color */
+          color: #4a77ca;
         }
       }
     }
@@ -171,8 +170,7 @@ const findActiveChild = (children, activeId) => {
     padding-left: 16px;
     margin: 0;
     list-style-type: none;
-    border-left: 1px dashed var(--theme-border); /* Subtree border color */
-    transition: border-color 0.3s;
+    border-left: 1px dashed #e5e5e5;
   }
 }
 
@@ -180,8 +178,6 @@ const findActiveChild = (children, activeId) => {
 .level-0 {
   font-weight: 600;
   font-size: 16px;
-  /* Level 0 text color - can override if needed */
-  /* color: var(--theme-text); */
 }
 
 .level-1 {
@@ -191,15 +187,11 @@ const findActiveChild = (children, activeId) => {
   .item-text {
     font-size: 15px;
   }
-  /* Level 1 text color - can override if needed */
-  /* color: var(--theme-text); */
 }
 
 .level-2 .item-text {
   font-size: 14px;
   font-weight: 500;
-  /* Level 2 text color - can override if needed */
-  /* color: var(--theme-text); */
 }
 
 .level-3,
@@ -209,8 +201,6 @@ const findActiveChild = (children, activeId) => {
   .item-text {
     font-size: 13px;
     font-weight: normal;
-    /* Lower levels text color - can override if needed */
-    /* color: var(--theme-text); */
   }
 }
 

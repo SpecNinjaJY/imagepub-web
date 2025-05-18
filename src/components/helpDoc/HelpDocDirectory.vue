@@ -257,29 +257,20 @@ onUnmounted(() => {
 }
 
 .document-list-container {
-  background-color: var(--theme-card);
+  background-color: #FFFFFF;
   border-radius: 10px;
   padding: 10px;
-  color: var(--theme-text);
-  transition: background 0.3s, color 0.3s;
 }
 
 .related-list {
   margin-top: 20px;
   padding: 20px 14px;
-  background: var(--theme-card);
-  border-radius: 8px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
-  color: var(--theme-text);
-  transition: background 0.3s, color 0.3s;
 }
 
 .related-list-item {
   padding: 10px;
   border-radius: 5px;
-  background-color: var(--theme-hover);
+  background-color: #f0f0f0;
   margin: 10px;
-  color: var(--theme-text);
-  transition: background 0.3s, color 0.3s;
 }
 </style>

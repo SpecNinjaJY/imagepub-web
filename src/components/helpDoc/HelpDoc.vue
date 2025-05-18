@@ -199,20 +199,14 @@ onMounted(() => {
 .help-doc {
   display: flex;
   position: relative;
-  background: var(--theme-bg);
-  color: var(--theme-text);
-  min-height: 100vh;
-  transition: background 0.3s, color 0.3s;
 }
 
 .sidebar {
   width: 15%;
   min-width: 200px;
-  background-color: var(--theme-card);
+  background-color: #f5f7fa;
   padding: 16px;
-  border-right: 1px solid var(--theme-border);
-  color: var(--theme-text);
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  border-right: 1px solid #e6e9ed;
 }
 
 .markdown-body {
@@ -220,21 +214,10 @@ onMounted(() => {
   overflow: auto;
   padding: 16px;
   max-height: 90vh;
-  background: var(--theme-card);
-  color: var(--theme-text);
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s;
 }
 
-/* 板卡信息区 */
 .board-info-2 {
   margin-top: 24px;
-  background: var(--theme-card);
-  color: var(--theme-text);
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 12px 0 var(--theme-shadow);
 }
 
 .info-detail {
@@ -244,41 +227,43 @@ onMounted(() => {
 
 #title {
   font-size: 14px;
-  color: var(--theme-text);
-  opacity: 0.7;
+  color: rgba(102, 102, 102, 1);
 }
 
 #content {
   font-size: 15px;
   margin-top: 4px;
-  color: var(--theme-text);
+  color: #333;
 }
 
 #board-block {
   width: 33%;
 }
 
-/* 滚动条适配主题 */
+/* 自定义滚动条样式 - 兼容多种浏览器 */
 .markdown-body::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 .markdown-body::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 3px;
 }
+
 .markdown-body::-webkit-scrollbar-thumb {
-  background: var(--theme-border);
+  background: #e1e1e1;
   border-radius: 3px;
 }
+
 .markdown-body::-webkit-scrollbar-thumb:hover {
-  background: var(--theme-hover);
+  background: #dddddd;
 }
 
 /* Firefox 支持 */
 .markdown-body {
   scrollbar-width: thin;
-  scrollbar-color: var(--theme-border) transparent;
+  scrollbar-color: #e1e1e1 transparent;
 }
 
 /* IE/Edge 支持 */
@@ -289,20 +274,19 @@ onMounted(() => {
 .sidebar-mobile {
   position: absolute;
   right: 0px;
-  border-left: 1px solid var(--theme-border);
+  border-left: 1px solid #e5e7eb;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   width: 250px;
   z-index: 20;
   transform: translateX(100%);
   animation: slideIn 0.3s forwards;
-  background: var(--theme-card);
-  color: var(--theme-text);
 }
 
 @keyframes slideIn {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -316,7 +300,7 @@ onMounted(() => {
   height: 40px;
   border: none;
   border-radius: 50%;
-  background-color: var(--el-color-primary);
+  background-color: #165DFF;
   color: white;
   display: flex;
   align-items: center;
@@ -328,7 +312,7 @@ onMounted(() => {
 }
 
 .sidebar-toggle:active {
-  background-color: var(--el-color-primary-dark);
+  background-color: #0E42D2;
 }
 
 .hidden {
@@ -339,47 +323,18 @@ onMounted(() => {
   .sidebar-desktop {
     display: none;
   }
+
   .content-area {
     padding: 24px;
     padding-top: 80px;
   }
+
   .markdown-body {
     width: 90vw;
   }
+
   .help-document {
     flex-direction: column;
   }
 }
-
-/* Markdown 内容区域的代码块适配暗黑模式 */
-.markdown-body :deep(pre) {
-  background-color: var(--theme-code-bg) !important;
-  color: var(--theme-code-text) !important;
-}
-
-.markdown-body :deep(code) {
-  background-color: var(--theme-code-bg) !important; /* Ensure inline code also has dark background if needed */
-  color: var(--theme-code-text) !important;
-}
-
-/* Adjust specific highlight.js elements if necessary */
-.markdown-body :deep(.hljs) {
-  background: var(--theme-code-bg) !important;
-  color: var(--theme-code-text) !important;
-}
-
-.markdown-body :deep(.hljs-addition),
-.markdown-body :deep(.hljs-deletion),
-.markdown-body :deep(.hljs-doctag),
-.markdown-body :deep(.hljs-meta),
-.markdown-body :deep(.hljs-selector-attr),
-.markdown-body :deep(.hljs-selector-class),
-.markdown-body :deep(.hljs-selector-id),
-.markdown-body :deep(.hljs-selector-pseudo),
-.markdown-body :deep(.hljs-string) {
-    color: var(--theme-text-secondary) !important; /* Example: adjust string color */
-}
-
-/* You might need to add more rules here for other highlight.js token types
-   based on the specific highlighting theme and desired appearance. */
 </style>
