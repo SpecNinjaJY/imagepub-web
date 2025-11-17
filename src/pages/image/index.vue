@@ -68,7 +68,7 @@
       <div class="content-toggle-area">
         <!-- 帮助文档 -->
         <div class="bottom-container">
-          <div v-if="helpVisible" class="help-doc-card">
+          <div v-if="markdownURL" class="help-doc-card">
            
             <HelpDoc v-if="markdownURL !== ''" :markdownURL="markdownURL" :docList="docList" :boardDetail="boardDetail" />
           </div>
@@ -186,6 +186,8 @@ const visible = ref(false)
 
 const customContainer = ref(null);
 
+
+console.log(markdownURL)
 
 const props = defineProps({
   productUri: String,
