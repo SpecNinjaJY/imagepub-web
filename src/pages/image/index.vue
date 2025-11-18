@@ -187,8 +187,6 @@ const visible = ref(false)
 const customContainer = ref(null);
 
 
-console.log(markdownURL)
-
 const props = defineProps({
   productUri: String,
   version1: String,

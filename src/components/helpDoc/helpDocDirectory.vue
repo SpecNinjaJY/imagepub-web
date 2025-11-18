@@ -221,7 +221,6 @@ const handleDocScroll = () => {
 
 
 // const parseTocFromMarkdown = (markdown) => {
-//   //console.log(markdown)
 //   // 第一步：过滤掉所有代码块内容
 //   let inCodeBlock = false;
 //   let codeBlockType = ''; // 记录代码块类型（```或~~~）
@@ -246,7 +245,6 @@ const handleDocScroll = () => {
 //     return !inCodeBlock;
 //   });
 
-//   // console.log(lines,markdown)
 //   // 后续逻辑与原代码一致，但基于过滤后的lines处理
 //   const items = [];
 //   let currentSection = null;
