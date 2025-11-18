@@ -5,9 +5,9 @@
       <el-tooltip
         v-for="(it,index) in mdFiles"
         class="box-item"
-        effect="dark"
+        effect="light"
         :content="it[0]?.text"
-        placement="top"
+        placement="right-start"
       >
          <div @click="showMarkDown(index)" class="related-list-item" >{{it[0]?.text}}</div>
       </el-tooltip>

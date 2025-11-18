@@ -34,8 +34,6 @@
         </div>
       </div>
       <div v-html="parsedMarkdown"></div>
-
-      源文件：{{ markdownURL }}
     </div>
   </div>
 </template>
